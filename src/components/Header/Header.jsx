@@ -11,6 +11,8 @@ function Header() {
 
     const navigate = useNavigate()
 
+
+    // Generally arrays are made when Navigation like this are created and then loop upon that array
     const navItems = [
         {
             name: 'Home',
@@ -51,7 +53,7 @@ function Header() {
                     </div>
                     <ul className="flex ml-auto">
                         {navItems.map((item) =>
-                            navItems.active ? (
+                            item.active ? (
                                 <li key={item.name}>
                                     <button
                                         onClick={() => navigate(item.slug)}
