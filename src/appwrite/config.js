@@ -16,6 +16,7 @@ export class Service {
         this.storage = new Storage(client);
     }
 
+    
     async createPost({ title, slug, content, featuredImage, status, userId }) {
         try {
             return await this.databases.createDocument(
@@ -34,6 +35,7 @@ export class Service {
             console.log("Appwrite service :: createPost :: error", error);
         }
     }
+
     // slug in place of documnet ID as per appwrite to uniquely identify what post to be updated.
     async updatePost(slug, { title, content, featuredImage, status, userId }) {
         try {
@@ -52,6 +54,7 @@ export class Service {
             console.log("Appwrite service :: UpdatePost :: error", error);
         }
     }
+
 
     async deletePost(slug) {
         try {
@@ -98,7 +101,7 @@ export class Service {
 
     // file upload service
 
-    async uploadFiles(file) {
+    async uploadFile(file) {
         try {
             return await this.storage.createFile(
                 conf.appwriteBucketId,
