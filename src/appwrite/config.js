@@ -13,7 +13,7 @@ export class Service {
             .setEndpoint(conf.appwriteUrl)
             .setProject(conf.appwriteProjectId)
         this.databases = new Databases(this.client);
-        this.storage = new Storage(client);
+        this.storage = new Storage(this.client);
     }
 
     
@@ -37,7 +37,7 @@ export class Service {
     }
 
     // slug in place of documnet ID as per appwrite to uniquely identify what post to be updated.
-    async updatePost(slug, { title, content, featuredImage, status, userId }) {
+    async updatePost(slug, { title, content, featuredImage, status }) {
         try {
             return await this.databases.updateDocument(
                 conf.appwriteDatabaseId,
@@ -81,6 +81,7 @@ export class Service {
             )
         } catch (error) {
             console.log("Appwrite service :: getPost :: error", error);
+            return false
         }
     }
 
@@ -110,6 +111,7 @@ export class Service {
             )
         } catch (error) {
             console.log("Appwrite service :: uploadFiles :: error", error);
+            return false
         }
     }
 
@@ -124,6 +126,7 @@ export class Service {
             return true
         } catch (error) {
             console.log("Appwrite service :: deleteFile :: error", error);
+            return false
         }
     }
 

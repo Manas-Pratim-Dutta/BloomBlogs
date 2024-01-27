@@ -1,9 +1,10 @@
-import './App.css'
 import { useEffect, useState } from 'react'
+
 import { useDispatch } from 'react-redux'
 import authService from "./appwrite/auth"
 import { login, logout } from "./store/authSlice"
 import { Header, Footer } from './components'
+import { Outlet } from 'react-router-dom'
 
 function App() {
   const [loading, setLoading] = useState(true)   // for conditional rendering(if-else) as network may be busy.
@@ -27,7 +28,7 @@ function App() {
       <div className='w-full block'>
         <Header />
         <main>
-          TODO {/* <Outlet/> */}
+         LOGO: <Outlet/> 
         </main>
         <Footer />
       </div>

@@ -14,7 +14,7 @@ export class AuthService {
 
     async createAccount({email, password, name}){
         try {
-            const userAccount = await this.account.create( ID.unique(), email, password, name)
+            const userAccount = await this.account.create( ID.unique(), email, password, name);
             if (userAccount) {
                 // call another method 
                 return this.login({email, password})
@@ -39,7 +39,7 @@ export class AuthService {
         try {
             return await this.account.get();
         } catch (error) {
-            throw error
+            console.log("Appwrite serive :: getCurrentUser :: error", error);
         }
         return null;
     }
@@ -58,14 +58,3 @@ const authService = new AuthService();
 
 
 export default authService
-
-
-
-// const client = new Client()
-
-//     .setEndpoint('https://cloud.appwrite.io/v1') 
-//     .setProject('<PROJECT_ID>');           
-
-// const account = new Account(client);
-
-// just that after creating the client from the object we are giving the details to the account not explicitly defining earlier by the help of object 
