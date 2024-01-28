@@ -65,7 +65,7 @@ export class Service {
             )
             return true
         } catch (error) {
-            console.log("Appwrite service :: createPost :: error", error);
+            console.log("Appwrite service :: deletePost :: error", error);
             return false
         }
     }
@@ -77,7 +77,7 @@ export class Service {
             return await this.databases.getDocument(
                 conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
-                slug,
+                slug
             )
         } catch (error) {
             console.log("Appwrite service :: getPost :: error", error);
