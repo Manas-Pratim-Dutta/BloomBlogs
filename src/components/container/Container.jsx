@@ -1,9 +1,8 @@
-import React from "react";
+import React from 'react'
 
-
-// Container accpets properties as childrens. Its a box where we define styling properties.
-function Container({childeren}){
-    return <div className="w-full max-w-7xl mx-auto px-4">{childeren}</div>
-   
+function Container({children}) {
+  return <div className='w-full max-w-7xl mx-auto px-4'>{children}</div>;
+  
 }
+
 export default Container
