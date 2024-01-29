@@ -18,12 +18,13 @@ Welcome to BLOOM BLOG! BLOOM BLOG is a platform where users can share their stor
   - React.js
   - Tailwind CSS
   - React Router
-  - React Hook Form
+  - React-Hook-Form
   - TinyMCE Editor
+  - Redux
+  - Redux-Toolkit
 
 - **Backend**:
   - Appwrite
-  - (Any additional backend services, if applicable)
 
 - **Hosting**:
   - Vercel
