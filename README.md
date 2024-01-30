@@ -27,7 +27,7 @@ Welcome to BLOOM BLOG! BLOOM BLOG is a platform where users can share their stor
   - Appwrite
 
 - **Hosting**:
-  - Vercel
+  - Vercel <kbd>[Live](https://bloom-blog-one.vercel.app/)
 
 ## Installation and Setup
 
