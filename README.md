@@ -2,7 +2,7 @@
 
 Welcome to BLOOM BLOG! BLOOM BLOG is a platform where users can share their stories, ideas, and experiences through blog posts. With features like user authentication, blog post creation with images and content, and the ability to explore other users' posts, BLOOM BLOG offers a seamless blogging experience.
 
-![BLOOM BLOG Preview](url_to_screenshot_or_demo)
+![BLOOM BLOG Preview](https://github.com/Manas-Pratim-Dutta/BloomBlogs/blob/main/src/assets/Screenshot%20(26).png)
 
 ## Features
 
